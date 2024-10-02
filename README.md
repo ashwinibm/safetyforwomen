@@ -1,5 +1,3 @@
-## Next.js App Router Course - Starter
+## Safety For Women Dashboard
 
-This is the starter template for the Next.js App Router Course. It contains the starting code for the dashboard application.
-
-For more information, see the [course curriculum](https://nextjs.org/learn) on the Next.js Website.
+This is the starter project for miscellanious SFW pages. Built with [Next JS](https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://nextjs.org/&ved=2ahUKEwiR9ayXp--IAxVr1DgGHSpHPQ0QFnoECAgQAQ&usg=AOvVaw2lvpxQDmLPmn3zhK26RJ4F).
