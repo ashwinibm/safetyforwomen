@@ -20,6 +20,20 @@ const options = {
   zoomControl: true,
 };
 
+const buttonStyle = {
+  position: 'absolute' as 'absolute',
+  top: '20px',
+  left: '20px',
+  backgroundColor: '#ff000a',
+  color: 'white',
+  border: 'none',
+  padding: '10px 20px',
+  borderRadius: '5px',
+  cursor: 'pointer',
+  fontWeight: 'medium',
+  zIndex: 1000, // Ensure the button is on top of the map
+};
+
 const Map: React.FC = () => {
   const { isLoaded, loadError } = useLoadScript({
     googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY as string, // Make sure to set this in your .env.local file
@@ -30,6 +44,13 @@ const Map: React.FC = () => {
   if (!isLoaded) return <div>Loading Maps</div>;
 
   return (
+      <div style={{ position: 'relative', height: '100vh', width: '100%' }}>
+        <button
+        onClick={() => window.open('https://bit.ly/SafetyforWomenCampaign', '_blank')}
+        style={buttonStyle}
+      >
+        Join the community 🚀
+      </button>
     <GoogleMap
       mapContainerStyle={mapContainerStyle}
       zoom={5}
@@ -60,6 +81,7 @@ const Map: React.FC = () => {
         </InfoWindow>
       )}
     </GoogleMap>
+    </div>
   );
 };
 
