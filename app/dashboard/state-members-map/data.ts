@@ -1,4 +1,4 @@
-import type { StateData } from "@/app/dashboard/state-map/types";
+import type { StateData } from "./types";
 export const statesData: StateData[] = [
   { state: 'Andhra Pradesh', participants: 110, lat: 15.9129, lng: 79.7400 },
   { state: 'Arunachal Pradesh', participants: 50, lat: 28.2180, lng: 94.7278 },

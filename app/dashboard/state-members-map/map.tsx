@@ -1,14 +1,21 @@
 "use client";
-import React, { useState } from 'react';
+
+import React, {useEffect, useState} from 'react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import L, { Icon } from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import { DefaultIcon } from './markerIcon';
 import type { StateData } from "./types";
 import {statesData} from "./data";
-const Page: React.FC = () => {
+
+const Map: React.FC = () => {
   const center: [number, number] = [20.5937, 78.9629];
   const [selectedState, setSelectedState] = useState<StateData | null>(null);
+
+  useEffect(() => {
+
+    // Leaflet requires window object which is only available in browser
+  }, []);
 
   return (
     <MapContainer center={center} zoom={5} style={{ height: '100%', width: '100%' }}>
@@ -39,4 +46,4 @@ const Page: React.FC = () => {
   );
 }
 
-export default Page;
+export default Map;
